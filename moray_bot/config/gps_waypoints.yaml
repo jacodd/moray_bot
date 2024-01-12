@@ -1,0 +1,18 @@
+waypoints:
+# 1:
+- latitude: 0.0
+  longitude: 0.0
+  yaw: 0.7861881069088523
+# 2:
+- latitude: 3.8
+  longitude: -2.7
+  yaw: 0.7861881069088523
+
+# 3:
+- latitude: 8.6
+  longitude: 3.0
+  yaw: 0.7861881069088523
+# 4:
+- latitude: 5.4
+  longitude: 6.4
+  yaw: 0.7861881069088523
