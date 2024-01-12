@@ -7,9 +7,13 @@ RUN apt-get update && apt-get install -y \
     ros-humble-nav2* \
     ros-humble-robot-localization \
     ros-humble-turtlebot3-gazebo \
-    git 
+    git \
+    python3-pip 
 
-# 
+# Install python dependencies
+RUN pip install pyproj
+
+# paths
 RUN echo "export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/humble/share/turtlebot3_gazebo/models" >> ~/.bashrc
 
 # Clone the repo
@@ -22,3 +26,4 @@ RUN echo "source /root/ws/install/setup.bash" >> ~/.bashrc
 
 # Run the simulation
 # CMD ["bash", "-c", "source ~/.bashrc && ros2 launch moray_bot gazebo_gps_world.launch.py && ros2 launch moray_bot gnss_waypoint_follower.launch.py"]
+# CMD ["bash", "-c", "source ~/.bashrc && ros2 run moray_bot follower"]
